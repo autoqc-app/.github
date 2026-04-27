@@ -1,6 +1,6 @@
 # AutoQC
 
-**Automated video quality control — 15 AI-powered checks, zero manual frame scrubbing.**
+**Automated video quality control — AI-powered subtitle QA, brand detection, and 13 signal checks. Zero manual frame scrubbing.**
 
 AutoQC is a web-based SaaS platform that automatically detects visual, audio, and encoding issues in video files before delivery or broadcast. Built for content creators, post-production teams, broadcasters, and MCN agencies.
 
@@ -10,19 +10,20 @@ AutoQC is a web-based SaaS platform that automatically detects visual, audio, an
 
 ## What AutoQC detects
 
+### AI Visual Detection
+- **PlanD OCR** — GPU-accelerated OCR + LLM semantic analysis pipeline, **OCR Recall 96.9%**, 109 languages
+  - Typo & spelling error detection, safe zone check, subtitle extraction
+- **Logo & Brand Detection** — Grounding DINO v1 zero-shot detector, 4-stage aggregation pipeline, no brand sample upload required
+  - Logo copyright risk (amber markers) + branded product risk (orange markers) with dynamic bounding box tracking
+
 ### Video Quality (8 checks)
 - Black frames, flash frames, bad edits — single-pass detection (VideoArtifact v4.0, **F1 Score 103.7%**, Precision 100%)
 - Freeze frames — 3-stage cascade with motion-vector entropy analysis (**100% pass rate, zero false positives**)
 - Blur, brightness, borders, aspect ratio
 
 ### Audio Quality (5 checks)
-- Loudness compliance — EBU R128 / ATSC A/85, speech-gated algorithm
-- Audio clipping (true-peak), background noise, silence, speech clarity
+- Audio loudness compliance, audio clipping (true-peak), background noise, silence, speech clarity
 - All 5 audio checks share a single Silero VAD timeline — **Audio Module 75% faster** vs. independent per-check analysis
-
-### AI Visual Detection
-- **PlanD OCR** — GPU-accelerated OCR + LLM semantic analysis pipeline, **OCR Recall 96.9%**, 109 languages
-- **Logo & Brand Detection** — Grounding DINO v1 zero-shot detector, 4-stage aggregation pipeline, no brand sample upload required
 
 ### Platform Compliance
 - YouTube · TikTok · Instagram · Broadcast TV · Custom presets

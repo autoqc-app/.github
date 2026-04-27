@@ -57,4 +57,5 @@ AutoQC is a web-based SaaS platform that automatically detects visual, audio, an
 - Product: [autoqc.app](https://www.autoqc.app)
 - Product Hunt: [producthunt.com/products/autoqc](https://www.producthunt.com/products/autoqc/launches/autoqc)
 - G2 Reviews: [g2.com/products/autoqc](https://www.g2.com/products/autoqc/reviews)
+- Crunchbase: [crunchbase.com/organization/autoqc](https://www.crunchbase.com/organization/autoqc)
 - Release notes: [autoqc.app/resource/whats-new](https://www.autoqc.app/resource/whats-new)
